@@ -1,0 +1,436 @@
+<!-- Jobdassh Website: Full HTML with CSS and JS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jobdassh | Bridging Global Healthcare Talent</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    :root {
+      --primary: #002c3e;
+      --accent: #14b8a6;
+      --light: #f9f9f9;
+      --dark: #1e1e1e;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); scroll-behavior: smooth; }
+    section { opacity: 0; transform: translateY(40px); }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
+    .navbar {
+      background: var(--primary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo { color: #fff; font-weight: bold; font-size: 1.5rem; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #fff; text-decoration: none; transition: 0.3s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      background: url('./Assets/j.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-title {
+      font-size: 3rem;
+      animation: fadeInDown 1s ease forwards;
+    }
+    .hero-subtext {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+    }
+    .cta-btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      margin-top: 2rem;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover { background: #0f9d90; }
+
+    .why-section, .testimonials {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .why-section h2, .testimonials h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .feature-card:hover { transform: translateY(-10px); }
+    .feature-card i {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      margin: 1rem auto;
+      max-width: 700px;
+      border-left: 5px solid var(--accent);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    }
+    .footer {
+  background: #002c3e;
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.footer-section h4 {
+  margin-bottom: 1rem;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-section input {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section button {
+  background: #14b8a6;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #1b4a59;
+  padding-top: 1rem;
+}
+    /* New Additional Sections */
+    .overview-section, .process-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .overview-section h2, .process-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    .overview-cards, .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .overview-card, .process-step {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    .overview-card img, .process-step img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+    .overview-card h3, .process-step h4 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2rem; }
+      .nav-links { flex-direction: column; gap: 0.5rem; }
+    }
+    .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #002c3e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Jobdassh</div>
+    <div class="lang-toggle">
+      <button onclick="toggleLanguage()" id="langBtn">DE</button>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Bridging Global Healthcare Talent</h1>
+      <p class="hero-subtext">Connecting certified healthcare candidates with institutions in Germany</p>
+      <a href="services.html" class="cta-btn">Explore Services</a>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <h2>Why Choose Jobdassh</h2>
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-user-check"></i>
+        <h3>Certified Candidates</h3>
+        <p>All candidates are B1/B2 certified and culturally trained.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-globe"></i>
+        <h3>Global Reach</h3>
+        <p>We connect talents from multiple countries with German institutions.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Ethical Recruitment</h3>
+        <p>Zero-fee policy for candidates and transparent processes.</p>
+      </div>
+    </div>
+  </section>
+  <section class="overview-section">
+    <h2>Explore Our Services</h2>
+    <div class="overview-cards">
+      <div class="overview-card">
+        <img src="https://img.icons8.com/ios-filled/100/language.png" alt="Certified">
+        <h3>Certified Talent</h3>
+        <p>All candidates hold B1/B2 certification and are culturally trained for Germany's healthcare system.</p>
+      </div>
+      <div class="overview-card">
+        <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Relocation">
+        <h3>Relocation Support</h3>
+        <p>Visa application assistance, airport pickup, and accommodation help through trusted partners.</p>
+      </div>
+      <div class="overview-card">
+        <img src="https://img.icons8.com/ios-filled/100/briefcase.png" alt="Onboarding">
+        <h3>Onboarding & Integration</h3>
+        <p>We coordinate your onboarding process and offer 3–12 months of post-placement support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h2>How It Works</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <img src="./Assets/a.png" alt="Apply">
+        <h4>1. Apply</h4>
+        <p>We pre-select suitable candidates through thorough screening.</p>
+      </div>
+      <div class="process-step">
+        <img src="https://img.icons8.com/ios-filled/100/brain.png" alt="Train">
+        <h4>2. Train</h4>
+        <p>Language certification and orientation on German work culture.</p>
+      </div>
+      <div class="process-step">
+        <img src="./Assets/f.png" alt="Relocate">
+        <h4>3. Relocate</h4>
+        <p>Visa, accommodation and onboarding services included.</p>
+      </div>
+      <div class="process-step">
+        <img src="https://img.icons8.com/ios-filled/100/stethoscope.png" alt="Work">
+        <h4>4. Work</h4>
+        <p>Begin your Ausbildung or employment with trusted healthcare institutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Candidates Say</h2>
+    <div class="testimonial">
+      <p>"Jobdassh made the entire process smooth and stress-free."</p>
+      <h4>— Hilda</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Their ongoing support made settling in so much easier."</p>
+      <h4>— Uche</h4>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section logo">
+        <h2>Jobdassh</h2>
+        <p>Bridging global healthcare talent with opportunity in Germany.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+        <p><i class="fas fa-map-marker-alt"></i> Göttingen, Germany</p>
+      </div>
+      <div class="footer-section newsletter">
+        <h4>Subscribe</h4>
+        <form>
+          <input type="email" placeholder="Your email" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+
+  <script>
+    // Simple GSAP Animation
+    gsap.from(".hero-title", { duration: 1, y: -50, opacity: 0 });
+    gsap.from(".hero-subtext", { duration: 1.5, delay: 0.3, y: -30, opacity: 0 });
+    gsap.from(".cta-btn", { duration: 1.5, delay: 0.6, scale: 0.8, opacity: 0 });
+    gsap.from(".feature-card", {
+      scrollTrigger: ".feature-card",
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2
+    });
+  </script>
+  <script>
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+          gsap.to(section, {
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 80%',
+              toggleActions: 'play none none none'
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1
+          });
+        });
+    </script>
+    <script>
+      function toggleMenu() {
+        document.getElementById('navMenu').classList.toggle('active');
+      }
+    </script>
+    <script>
+      let currentLang = 'en';
+    
+      const translations = {
+        de: {
+          heroTitle: 'Überbrückung globaler Gesundheitsfachkräfte',
+          heroSubtitle: 'Vermittlung zertifizierter Pflegekräfte an deutsche Einrichtungen',
+          ctaBtn: 'Dienstleistungen erkunden'
+        },
+        en: {
+          heroTitle: 'Bridging Global Healthcare Talent',
+          heroSubtitle: 'Connecting certified healthcare candidates with institutions in Germany',
+          ctaBtn: 'Explore Services'
+        }
+      };
+    
+      function toggleLanguage() {
+        currentLang = currentLang === 'en' ? 'de' : 'en';
+        document.getElementById('langBtn').textContent = currentLang === 'en' ? 'DE' : 'EN';
+    
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[currentLang][key]) {
+            el.textContent = translations[currentLang][key];
+          }
+        });
+      }
+    </script>
+    
+</body>
+</html>
+
+

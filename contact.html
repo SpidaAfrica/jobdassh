@@ -1,0 +1,268 @@
+<!-- Jobdassh Website: Contact Page (contact.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Jobdassh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #1e1e1e;
+    }
+    header.navbar {
+      background: #002c3e;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo { color: #fff; font-weight: bold; font-size: 1.5rem; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: #fff; text-decoration: none; transition: 0.3s; }
+    .nav-links a:hover { color: #14b8a6; }
+
+    .contact-section {
+      max-width: 1200px;
+      padding: 4rem 2rem;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #002c3e;
+    }
+    .contact-info p, .contact-info li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #14b8a6;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #109e90;
+    }
+.footer {
+  background: #002c3e;
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.footer-section h4 {
+  margin-bottom: 1rem;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-section input {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section button {
+  background: #14b8a6;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #1b4a59;
+  padding-top: 1rem;
+}
+    @media (max-width: 768px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+      }
+      .nav-links { flex-direction: column; gap: 0.5rem; }
+    }
+    .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #002c3e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Jobdassh</div>
+        <div class="lang-toggle">
+            <button onclick="toggleLanguage()" id="langBtn">DE</button>
+          </div>
+          
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        </header>
+      
+  <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/p.jpg') center/cover no-repeat; color: white; text-align: center; padding: 6rem 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Contact Us</h1>
+    <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">We’d love to hear from you. Reach out to discuss partnerships, placement opportunities, or ask any questions.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Reach out to discuss partnerships, placement opportunities, or ask any questions. Contact us to book a free consultation</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:sc.offor@jobdaash.com">info@jobdassh.com</a></li>
+        <li><strong>Phone:</strong> +49 151 6156 9432</li>
+        <li><strong>Address:</strong> Erich-Schmidt-Weg 2, 37083 Göttingen, Germany</li>
+        <li><strong>Website:</strong> <a href="https://jobdassh.com">jobdassh.com</a></li>
+      </ul>
+    </div>
+    <form method="POST" action="contact.php">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section logo">
+        <h2>Jobdassh</h2>
+        <p>Bridging global healthcare talent with opportunity in Germany.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+        <p><i class="fas fa-map-marker-alt"></i> Göttingen, Germany</p>
+      </div>
+      <div class="footer-section newsletter">
+        <h4>Subscribe</h4>
+        <form>
+          <input type="email" placeholder="Your email" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>  
+  <script>
+    let currentLang = 'en';
+  
+    const translations = {
+      de: {
+        heroTitle: 'Überbrückung globaler Gesundheitsfachkräfte',
+        heroSubtitle: 'Vermittlung zertifizierter Pflegekräfte an deutsche Einrichtungen',
+        ctaBtn: 'Dienstleistungen erkunden'
+      },
+      en: {
+        heroTitle: 'Bridging Global Healthcare Talent',
+        heroSubtitle: 'Connecting certified healthcare candidates with institutions in Germany',
+        ctaBtn: 'Explore Services'
+      }
+    };
+  
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'de' : 'en';
+      document.getElementById('langBtn').textContent = currentLang === 'en' ? 'DE' : 'EN';
+  
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+    }
+  </script>
+  
+</body>
+</html>
+  
