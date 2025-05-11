@@ -110,7 +110,7 @@
       border-left: 5px solid var(--accent);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
     }
-    .footer {
+.footer {
   background: #002c3e;
   color: #fff;
   padding: 4rem 2rem 2rem;
@@ -338,6 +338,8 @@
   position: relative;
   animation: fadeIn 0.4s ease;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .modal .close {
@@ -348,6 +350,12 @@
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+.modal-content iframe {
+  height: 900px;
+  width: 100%;
+  border: none;
+  display: block;
 }
 
 @keyframes fadeIn {
