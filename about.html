@@ -103,14 +103,63 @@
 @media (max-width: 768px) {
       .nav-links { flex-direction: column; gap: 0.5rem; }
     }
+.cta-section {
+  background: linear-gradient(135deg, #002c3e, #14b8a6);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.cta-container {
+  max-width: 800px;
+  margin: auto;
+}
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background: #ffffff;
+  color: #002c3e;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #f0f0f0;
+}
+@media (max-width: 768px) {
+  .cta-container h2 {
+    font-size: 1.5rem;
+  }
+  .cta-container p {
+    font-size: 1rem;
+  }
+}
+
   </style>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'de,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 <body>
+    <div id="google_translate_element"></div>
     <header class="navbar">
         <div class="logo">Jobdassh</div>
-        <div class="lang-toggle">
-            <button onclick="toggleLanguage()" id="langBtn">DE</button>
-        </div>
         <div class="menu-toggle" onclick="toggleMenu()">
           <i class="fas fa-bars"></i>
         </div>
@@ -120,6 +169,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a style="color: 'black'" href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank">Apply Now</a></li>
           </ul>
         </nav>
       </header>
@@ -356,7 +406,13 @@
       margin-top: 2rem;
     }
   </style>
-  
+  <section class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to Start Your Ausbildung Journey?</h2>
+    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank" class="cta-button">Apply Now</a>
+  </div>
+</section>
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section logo">

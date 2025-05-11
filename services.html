@@ -133,15 +133,64 @@
     display: block;
   }
 }
+.cta-section {
+  background: linear-gradient(135deg, #002c3e, #14b8a6);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.cta-container {
+  max-width: 800px;
+  margin: auto;
+}
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-container p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-button {
+  background: #ffffff;
+  color: #002c3e;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background: #f0f0f0;
+}
+@media (max-width: 768px) {
+  .cta-container h2 {
+    font-size: 1.5rem;
+  }
+  .cta-container p {
+    font-size: 1rem;
+  }
+}
+
 
   </style>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'de,en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 <body>
+  <div id="google_translate_element"></div>
     <header class="navbar">
         <div class="logo">Jobdassh</div>
-        <div class="lang-toggle">
-            <button onclick="toggleLanguage()" id="langBtn">DE</button>
-        </div>
         <div class="menu-toggle" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
@@ -151,6 +200,7 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><a style="color: 'black'" href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank">Apply Now</a></li>
             </ul>
         </nav>
         </header>
@@ -297,13 +347,39 @@
   </style>
   <!-- Additional Services Section with Modal -->
   
-  <!-- Special Offer Hero Section -->
+  <!-- Special Offer Hero Section 
   <section class="special-offer" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/s.jpg') center/cover no-repeat; color: white; padding: 5rem 2rem; text-align: center;">
     <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">ðŸŽ‰ Special Offer</h2>
     <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">
       50% package fee waiver for pre-screened, certified candidates ready to begin Ausbildung this year. Limited-time pilot offer!
     </p>
   </section>
+  -->
+  <section class="services-boxed section" style="padding: 4rem 2rem; background: #f9f9f9;">
+  <h2 style="text-align: center; margin-bottom: 2rem; color: #002c3e;">Explore Our Sevices</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+    <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+      <h3 style="color: #14b8a6;">For Candidates</h3>
+      <ul style="margin-top: 1rem; line-height: 1.8;">
+        <li>Pre-screening your eligibility</li>
+        <li>Language verification (B1/B2 German)</li>
+        <li>CV support and interview prep</li>
+        <li>Connecting you to top nursing schools and hospitals</li>
+        <li>Offering guidance for visa and relocation processes</li>
+      </ul>
+    </div>
+    <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+      <h3 style="color: #14b8a6;">For Partner Institutions</h3>
+      <ul style="margin-top: 1rem; line-height: 1.8;">
+        <li>Access a pool of qualified, German-speaking international candidates</li>
+        <li>Ensure cultural and linguistic readiness</li>
+        <li>Reduce onboarding risks through our tailored pre-departure training</li>
+        <li>Fill essential nursing roles with reliable professionals</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
   <section class="services-extra section" style="text-align: center;">
     <h2 style="color: #002c3e;">Additional Services</h2>
@@ -350,6 +426,13 @@
       if (e.target.classList.contains('modal')) e.target.style.display = 'none';
     };
   </script>
+  <section class="cta-section">
+  <div class="cta-container">
+    <h2>Ready to Start Your Ausbildung Journey?</h2>
+    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank" class="cta-button">Apply Now</a>
+  </div>
+</section>
   
   <footer class="footer">
     <div class="footer-content">

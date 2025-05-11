@@ -5,7 +5,7 @@
       $subject = strip_tags(trim($_POST['subject']));
       $message = trim($_POST['message']);
   
-      $to = "info@jobdassh.com"; // Replace with your receiving email
+      $to = "spidaafrica@gmail.com";//"info@jobdassh.com"; // Replace with your receiving email
       $headers = "From: $name <$email>\r\n";
       $headers .= "Reply-To: $email\r\n";
       $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
@@ -19,7 +19,7 @@
       if (mail($to, $subject, $body, $headers)) {
           echo "<script>alert('Message sent successfully!'); window.location.href='contact.html';</script>";
       } else {
-          echo "<script>alert('Message sending failed. Please try again.');</script>";
+          echo "<script>alert('Message sending failed. Please try again.'); window.location.href='contact.html';</script>";
       }
   }
   ?>
