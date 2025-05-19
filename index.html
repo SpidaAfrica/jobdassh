@@ -363,23 +363,80 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.a-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
 
+.a-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
 
-  </style>
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'de,en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
+.a-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#applyForm{
+  width: 80%;
+  max-width: 550px;
+}
+.a-input, .a-textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.a-button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .a-modal-content {
+    margin: 15% 5%;
+    padding: 15px;
+    width: 90%;
   }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+.a-input, .a-textarea {
+    font-size: 14px;
+    padding: 8px;
+    width: 90%;
+  }
+
+.a-button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .a-close {
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+  }
+}
+
+
+</style>
 </head>
 <body>
-  <div id="google_translate_element"></div>
   <header class="navbar">
     <div class="logo">Jobdassh</div>
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -391,15 +448,28 @@
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a style="color: 'black'" onclick="document.getElementById('applyModal').style.display='block'">Apply Now</a></li>
+        <li><a style="color: 'black'" onclick="document.getElementById('applyModal').style.display='block'" onclick="openModal()">Apply Now</a></li>
       </ul>
     </nav>
   </header>
+  <div id="applyModal" class="a-modal">
+    <div class="a-modal-content">
+      <span class="a-close" onclick="closeModal()">&times;</span>
+      <h2>Apply Here</h2>
+      <form id="applyForm">
+        <input class="a-input" type="text" name="name" placeholder="Your Name" required />
+        <input class="a-input" type="email" name="email" placeholder="Your Email" required />
+        <input class="a-input" type="text" name="subject" placeholder="Subject" required />
+        <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
+        <button class="a-button" type="submit">Send Application</button>
+      </form>
+    </div>
+  </div>
   <section class="hero">
     <div class="hero-content">
       <h1 class="hero-title">Bridging Global Healthcare Talent</h1>
       <p class="hero-subtext">Connecting certified healthcare candidates with institutions in Germany</p>
-      <a href="https://docs.google.com/forms/d/10NU9QL6Xa6u68B0ZJgF4mNQMB1urr01--Se7KyAJaSU/edit" class="cta-btn">Get Started</a>
+      <a href="#" class="cta-btn" onclick="openModal()">Get Started</a>
     </div>
   </section>
 
@@ -542,7 +612,7 @@
   <div class="cta-container">
     <h2>Ready to Start Your Ausbildung Journey?</h2>
     <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank" class="cta-button">Apply Now</a>
+    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
   </div>
 </section>
 
@@ -614,79 +684,6 @@
       }
     </script>
     <script>
-    /*
-      let currentLang = 'en';
-    
-      const translations = {
-        de: {
-          heroTitle: 'Überbrückung globaler Gesundheitsfachkräfte',
-          heroSubtitle: 'Vermittlung zertifizierter Pflegekräfte an deutsche Einrichtungen',
-          ctaBtn: 'Dienstleistungen erkunden'
-        },
-        en: {
-          heroTitle: 'Bridging Global Healthcare Talent',
-          heroSubtitle: 'Connecting certified healthcare candidates with institutions in Germany',
-          ctaBtn: 'Explore Services'
-        }
-      };
-    
-      function toggleLanguage() {
-        currentLang = currentLang === 'en' ? 'de' : 'en';
-        document.getElementById('langBtn').textContent = currentLang === 'en' ? 'DE' : 'EN';
-    
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          if (translations[currentLang][key]) {
-            el.textContent = translations[currentLang][key];
-          }
-        });
-      }
-     */
-      
-  async function translatePage() {
-  const apiKey = 'AIzaSyBORW95LXOE91vx3WAP0i6TFRN6oiGIS_U'; // Replace with your API key
-  const targetLang = 'de'; // Target language: German
-  
-  // Collect all text content from the page
-  const textElements = document.body.querySelectorAll('*');
-  let textToTranslate = [];
-
-  textElements.forEach(element => {
-    if (element.innerText) {
-      textToTranslate.push(element.innerText);
-    }
-  });
-
-  // Translate the text using Google Translate API
-  const translatedTexts = await Promise.all(textToTranslate.map(async text => {
-    const response = await fetch('https://translation.googleapis.com/language/translate/v2', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        q: text,
-        target: targetLang,
-        key: apiKey,
-      }),
-    });
-    
-    const data = await response.json();
-    return data.data.translations[0].translatedText;
-  }));
-
-  // Update the page with the translated text
-  let translatedIndex = 0;
-  textElements.forEach(element => {
-    if (element.innerText && translatedIndex < translatedTexts.length) {
-      element.innerText = translatedTexts[translatedIndex];
-      translatedIndex++;
-    }
-  });
-}
-
-    </script>
-    <script>
   document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
       const item = button.parentElement;
@@ -694,20 +691,43 @@
     });
   });
 </script>
- <div id="applyModal" class="modal">
-  <div class="modal-content animate">
-    <span class="close" onclick="document.getElementById('applyModal').style.display='none'">&times;</span>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?embedded=true"
-      width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
-</div>
-<script>
-  window.onclick = function(event) {
-    const modal = document.getElementById('applyModal');
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
+
+   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("bswxk6e-b-vZP8C8f"); // Replace with your EmailJS public key
+  })();
+
+  function openModal() {
+    document.getElementById("applyModal").style.display = "block";
   }
+
+  function closeModal() {
+    document.getElementById("applyModal").style.display = "none";
+  }
+
+  // Handle form submission
+  document.getElementById("applyForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1uskqje', 'template_f8ysdbm', this)
+      .then(() => {
+        alert('Application sent successfully!');
+        closeModal();
+        this.reset();
+      }, (error) => {
+        console.error('Failed:', error);
+        alert('Failed to send application.');
+      });
+  });
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target == document.getElementById("applyModal")) {
+      closeModal();
+    }
+  };
 </script>
 </body>
 </html>
