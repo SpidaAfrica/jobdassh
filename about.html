@@ -183,106 +183,7 @@
     right: 15px;
   }
 }
-
-  </style>
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">Jobdassh</div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
-        <nav>
-          <ul class="nav-links" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a style="color: 'black'" href="#" onclick="openModal()">Apply Now</a></li>
-          </ul>
-        </nav>
-      </header>
-  
-      <div id="applyModal" class="a-modal">
-        <div class="a-modal-content">
-          <span class="a-close" onclick="closeModal()">&times;</span>
-          <h2>Apply Here</h2>
-          <form id="applyForm">
-            <input class="a-input" type="text" name="name" placeholder="Your Name" required />
-            <input class="a-input" type="email" name="email" placeholder="Your Email" required />
-            <input class="a-input" type="text" name="subject" placeholder="Subject" required />
-            <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
-            <button class="a-button" type="submit">Send Application</button>
-          </form>
-        </div>
-      </div>
-  <!-- About Page Redesigned with Sections, Animations, and Interactivity -->
-<section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Assets/h.jpg') center/cover no-repeat; color: white; padding: 6rem 2rem; text-align: center;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">About Jobdassh</h1>
-    <p style="max-width: 700px; margin: auto; font-size: 1.2rem;" data-i18n="hero-section">Jobdassh is an international healthcare recruitment agency based in Germany. We bridge the global healthcare talent gap by ethically connecting German-speaking candidates with hospitals, care homes, and vocational institutions in Germany.</p>
-  </section>
-  
-  <section class="mission-vision section">
-    <div class="accordion">
-      <details open>
-        <summary>Our Mission</summary>
-        <p>To provide ethically grounded, end-to-end placement services for international healthcare candidates and support German institutions in building sustainable, skilled, and diverse teams.</p>
-      </details>
-      <details>
-        <summary>Our Vision</summary>
-        <p>To be the most trusted international recruitment partner for German healthcare institutions — recognized for our integrity, impact, and commitment to quality workforce solutions.</p>
-      </details>
-    </div>
-  </section>
-
-  <section class="proposition section" style="text-align: center;">
-    <h2 style="color: #002c3e;">Our Proposition</h2>
-    <button onclick="document.getElementById('propositionModal').style.display='block'" class="cta-btn">View Details</button>
-  </section>
-  
-  <!-- Proposition Modal -->
-  <div id="propositionModal" class="modal">
-    <div class="modal-content animate">
-      <span class="close" onclick="document.getElementById('propositionModal').style.display='none'">&times;</span>
-      <h3 style="color: #14b8a6; margin-bottom: 1rem;">Our Proposition</h3>
-      <img src="./Assets/m.jpg"
-           alt="Proposition Visual" style="width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 1rem;" />
-      <ul style="text-align: left; font-size: 1.1rem;">
-        <li>Mitigate staffing shortages sustainably</li>
-        <li>Get certified and compliant candidates</li>
-        <li>Access global talent without relocation stress</li>
-        <li>Improve retention through long-term support</li>
-      </ul>
-    </div>
-  </div>
-  
-  <section class="core-values section">
-    <h2 style="text-align: center; color: #002c3e;">Our Core Values</h2>
-    <div class="values-list">
-      <div class="value-box">Integrity</div>
-      <div class="value-box">Excellence</div>
-      <div class="value-box">Empathy</div>
-      <div class="value-box">Diversity & Inclusion</div>
-      <div class="value-box">Compliance</div>
-      <div class="value-box">Sustainability</div>
-    </div>
-  </section>
-  
-  <section class="drive-philosophy section">
-    <div class="carousel" style="max-width: 800px; margin: auto;">
-      <div class="carousel-item" style="display: block;">
-        <h3>Our Drive</h3>
-        <p>We are driven by a global demand for healthcare professionals and the opportunity to transform lives by helping institutions deliver better care while creating meaningful futures for our candidates in Germany.</p>
-      </div>
-      <div class="carousel-item" style="display: none;">
-        <h3>Our Philosophy</h3>
-        <p>We solve workforce shortages ethically and sustainably, benefitting employees, employers, and the healthcare industry at large. We uphold a zero-fee principle for candidates and provide robust support for our clients.</p>
-      </div>
-    </div>
-  </section>
-  
-  <style>
-    .menu-toggle {
+.menu-toggle {
   display: none;
   font-size: 1.5rem;
   color: white;
@@ -352,27 +253,6 @@
       from { transform: translateY(-50px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
-  </style>
-  
-  <script>
-    window.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        document.getElementById('propositionModal').style.display = 'none';
-      }
-    });
-  </script>
-  
-  
-  <script>
-    // Carousel animation
-    const carouselItems = document.querySelectorAll('.carousel-item');
-    let index = 0;
-    setInterval(() => {
-      carouselItems.forEach((item, i) => item.style.display = i === index ? 'block' : 'none');
-      index = (index + 1) % carouselItems.length;
-    }, 5000);
-  </script>
-  <style>
     .accordion details {
       background: #fff;
       padding: 1rem;
@@ -412,45 +292,144 @@
       margin-top: 2rem;
     }
   </style>
-  <section class="cta-section">
-  <div class="cta-container">
-    <h2>Ready to Start Your Ausbildung Journey?</h2>
-    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">Jobdassh</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a style="color: black;" href="#" onclick="openModal()">Jetzt bewerben</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="applyModal" class="a-modal">
+  <div class="a-modal-content">
+    <span class="a-close" onclick="closeModal()">&times;</span>
+    <h2>Hier bewerben</h2>
+    <form id="applyForm">
+      <input class="a-input" type="text" name="name" placeholder="Ihr Name" required />
+      <input class="a-input" type="email" name="email" placeholder="Ihre E-Mail" required />
+      <input class="a-input" type="text" name="subject" placeholder="Betreff" required />
+      <textarea class="a-textarea" name="message" placeholder="Ihre Nachricht" required></textarea>
+      <button class="a-button" type="submit">Bewerbung absenden</button>
+    </form>
+  </div>
+</div>
+
+<section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Assets/h.jpg') center/cover no-repeat; color: white; padding: 6rem 2rem; text-align: center;">
+  <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Über Jobdassh</h1>
+  <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">
+    Jobdassh ist eine internationale Personalvermittlungsagentur für das Gesundheitswesen mit Sitz in Deutschland. Wir überbrücken den globalen Fachkräftemangel, indem wir deutschsprachige Kandidaten ethisch mit Krankenhäusern, Pflegeeinrichtungen und Berufsschulen in Deutschland verbinden.
+  </p>
+</section>
+
+<section class="mission-vision section">
+  <div class="accordion">
+    <details open>
+      <summary>Unsere Mission</summary>
+      <p>Wir bieten ethisch fundierte, ganzheitliche Vermittlungsdienste für internationale Pflegekräfte und unterstützen deutsche Einrichtungen beim Aufbau nachhaltiger, qualifizierter und vielfältiger Teams.</p>
+    </details>
+    <details>
+      <summary>Unsere Vision</summary>
+      <p>Wir möchten der vertrauenswürdigste internationale Rekrutierungspartner für deutsche Gesundheitseinrichtungen sein – anerkannt für Integrität, Wirkung und hochwertige Personallösungen.</p>
+    </details>
   </div>
 </section>
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section logo">
-        <h2>Jobdassh</h2>
-        <p>Bridging global healthcare talent with opportunity in Germany.</p>
-      </div>
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact">
-        <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
-        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
-        <p><i class="fas fa-map-marker-alt"></i> Göttingen, Germany</p>
-      </div>
-      <div class="footer-section newsletter">
-        <h4>Subscribe</h4>
-        <form>
-          <input type="email" placeholder="Your email" />
-          <button>Subscribe</button>
-        </form>
-      </div>
+
+<section class="proposition section" style="text-align: center;">
+  <h2 style="color: #002c3e;">Unser Angebot</h2>
+  <button onclick="document.getElementById('propositionModal').style.display='block'" class="cta-btn">Details anzeigen</button>
+</section>
+
+<!-- Modal -->
+<div id="propositionModal" class="modal">
+  <div class="modal-content animate">
+    <span class="close" onclick="document.getElementById('propositionModal').style.display='none'">&times;</span>
+    <h3 style="color: #14b8a6; margin-bottom: 1rem;">Unser Angebot</h3>
+    <img src="./Assets/m.jpg" alt="Visualisierung des Angebots" style="width: 100%; max-width: 500px; border-radius: 12px; margin-bottom: 1rem;" />
+    <ul style="text-align: left; font-size: 1.1rem;">
+      <li>Personalmangel nachhaltig lindern</li>
+      <li>Zertifizierte und regelkonforme Kandidaten erhalten</li>
+      <li>Globales Talent ohne Umzugsstress gewinnen</li>
+      <li>Langfristige Unterstützung zur Verbesserung der Mitarbeiterbindung</li>
+    </ul>
+  </div>
+</div>
+
+<section class="core-values section">
+  <h2 style="text-align: center; color: #002c3e;">Unsere Kernwerte</h2>
+  <div class="values-list">
+    <div class="value-box">Integrität</div>
+    <div class="value-box">Exzellenz</div>
+    <div class="value-box">Empathie</div>
+    <div class="value-box">Vielfalt & Inklusion</div>
+    <div class="value-box">Regelkonformität</div>
+    <div class="value-box">Nachhaltigkeit</div>
+  </div>
+</section>
+
+<section class="drive-philosophy section">
+  <div class="carousel" style="max-width: 800px; margin: auto;">
+    <div class="carousel-item" style="display: block;">
+      <h3>Unser Antrieb</h3>
+      <p>Wir werden durch die weltweite Nachfrage nach Pflegefachkräften angetrieben und möchten Leben verändern, indem wir Institutionen zu besserer Versorgung verhelfen und unseren Kandidaten eine Zukunft in Deutschland ermöglichen.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
+    <div class="carousel-item" style="display: none;">
+      <h3>Unsere Philosophie</h3>
+      <p>Wir lösen Personalengpässe ethisch und nachhaltig – zum Vorteil von Arbeitnehmern, Arbeitgebern und dem gesamten Gesundheitswesen. Für Kandidaten gilt unser Null-Gebühren-Prinzip, für Kunden bieten wir umfassende Unterstützung.</p>
     </div>
-  </footer>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Bereit für deine Ausbildung in Deutschland?</h2>
+    <p>Starte jetzt deine Karriere im deutschen Gesundheitswesen. Die Bewerbung ist kostenlos und dauert nur wenige Minuten.</p>
+    <a href="#" class="cta-button" onclick="openModal()">Jetzt bewerben</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section logo">
+      <h2>Jobdassh</h2>
+      <p>Wir verbinden globale Pflegefachkräfte mit Chancen in Deutschland.</p>
+    </div>
+    <div class="footer-section links">
+      <h4>Schnellzugriff</h4>
+      <ul>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h4>Kontakt</h4>
+      <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+      <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+      <p><i class="fas fa-map-marker-alt"></i> Göttingen, Deutschland</p>
+    </div>
+    <div class="footer-section newsletter">
+      <h4>Newsletter abonnieren</h4>
+      <form>
+        <input type="email" placeholder="Ihre E-Mail-Adresse" />
+        <button>Abonnieren</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Jobdassh. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
   <script>
     function toggleMenu() {
       document.getElementById('navMenu').classList.toggle('active');
@@ -493,6 +472,22 @@
     }
   };
 </script>
+    <script>
+    window.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('propositionModal').style.display = 'none';
+      }
+    });
+  </script>
+  <script>
+    // Carousel animation
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    let index = 0;
+    setInterval(() => {
+      carouselItems.forEach((item, i) => item.style.display = i === index ? 'block' : 'none');
+      index = (index + 1) % carouselItems.length;
+    }, 5000);
+  </script>
 
   
 </body>
