@@ -143,6 +143,49 @@
   }
 }
 
+.a-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.a-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.a-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.a-input, .a-textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.a-button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
   </style>
   <script type="text/javascript">
   function googleTranslateElementInit() {
@@ -173,16 +216,16 @@
         </nav>
       </header>
   
-      <div id="applyModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal()">&times;</span>
+      <div id="applyModal" class="a-modal">
+        <div class="a-modal-content">
+          <span class="a-close" onclick="closeModal()">&times;</span>
           <h2>Apply for the Job</h2>
           <form id="applyForm">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="text" name="subject" placeholder="Subject" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Application</button>
+            <input class="a-input" type="text" name="name" placeholder="Your Name" required />
+            <input class="a-input" type="email" name="email" placeholder="Your Email" required />
+            <input class="a-input" type="text" name="subject" placeholder="Subject" required />
+            <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
+            <button class="a-button" type="submit">Send Application</button>
           </form>
         </div>
       </div>
