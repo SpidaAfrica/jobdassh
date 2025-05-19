@@ -340,135 +340,129 @@
   }
 }
   </style>
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'de,en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">Jobdassh</div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav>
-            <ul class="nav-links" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a style="color: 'black'" href="#" onclick="openModal()">Apply Now</a></li>
-            </ul>
-        </nav>
-        </header>
+    <div class="logo">Jobdassh</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="services.html">Dienstleistungen</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a style="color: 'black'" href="#" onclick="openModal()">Jetzt Bewerben</a></li>
+        </ul>
+    </nav>
+</header>
 
-      <div id="applyModal" class="a-modal">
-        <div class="a-modal-content">
-          <span class="a-close" onclick="closeModal()">&times;</span>
-          <h2>Apply Here</h2>
-          <form id="applyForm">
-            <input class="a-input" type="text" name="name" placeholder="Your Name" required />
-            <input class="a-input" type="email" name="email" placeholder="Your Email" required />
-            <input class="a-input" type="text" name="subject" placeholder="Subject" required />
-            <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
-            <button class="a-button" type="submit">Send Application</button>
-          </form>
-        </div>
-      </div>
-      
-  <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/p.jpg') center/cover no-repeat; color: white; text-align: center; padding: 6rem 2rem;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Contact Us</h1>
-    <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">We’d love to hear from you. Reach out to discuss partnerships, placement opportunities, or ask any questions.</p>
-  </section>
-  <section class="partner-section" style="padding: 4rem 2rem; background: #e8f5f3; text-align: center;">
-  <div style="max-width: 800px; margin: auto;">
-    <h2 style="color: #002c3e; font-size: 2rem; margin-bottom: 1rem;">Partner With Us</h2>
-    <p style="font-size: 1.1rem; color: #1e1e1e; margin-bottom: 2rem;">
-      Are you a hospital, care facility, or vocational training school looking for skilled, German-speaking healthcare candidates? Let's collaborate to bridge your staffing needs with top international talent.
-    </p>
-    <a href="#" class="partner-btn" onclick="opencModal()">Get in Touch</a>
-  </div>
-</section>
-<div id="cModal" class="c-modal">
-  <div class="c-modal-content">
-    <span class="c-close" onclick="closecModal()">&times;</span>
-    <h2>Send Us A Mail</h2>
-    <form id="cForm">
-      <input class="c-input" type="text" name="name" placeholder="Your Name" required />
-      <input class="c-input" type="email" name="email" placeholder="Your Email" required />
-      <input class="c-input" type="text" name="subject" placeholder="Subject" required />
-      <textarea class="c-textarea" name="message" placeholder="Your Message" required></textarea>
-      <button class="c-button" type="submit">Submit</button>
-    </form>
-  </div>
+<div id="applyModal" class="a-modal">
+    <div class="a-modal-content">
+        <span class="a-close" onclick="closeModal()">&times;</span>
+        <h2>Hier Bewerben</h2>
+        <form id="applyForm">
+            <input class="a-input" type="text" name="name" placeholder="Ihr Name" required />
+            <input class="a-input" type="email" name="email" placeholder="Ihre E-Mail" required />
+            <input class="a-input" type="text" name="subject" placeholder="Betreff" required />
+            <textarea class="a-textarea" name="message" placeholder="Ihre Nachricht" required></textarea>
+            <button class="a-button" type="submit">Bewerbung Abschicken</button>
+        </form>
+    </div>
 </div>
 
+<section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/p.jpg') center/cover no-repeat; color: white; text-align: center; padding: 6rem 2rem;">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Kontaktieren Sie Uns</h1>
+    <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">
+        Wir freuen uns, von Ihnen zu hören. Kontaktieren Sie uns, um Partnerschaften, Vermittlungsmöglichkeiten zu besprechen oder Fragen zu stellen.
+    </p>
+</section>
 
-  <section class="contact-section">
+<section class="partner-section" style="padding: 4rem 2rem; background: #e8f5f3; text-align: center;">
+    <div style="max-width: 800px; margin: auto;">
+        <h2 style="color: #002c3e; font-size: 2rem; margin-bottom: 1rem;">Partnerschaft mit uns</h2>
+        <p style="font-size: 1.1rem; color: #1e1e1e; margin-bottom: 2rem;">
+            Sind Sie ein Krankenhaus, eine Pflegeeinrichtung oder eine Berufsschule und suchen qualifizierte, deutschsprachige Pflegekräfte? Lassen Sie uns zusammenarbeiten, um Ihren Personalbedarf mit erstklassigen internationalen Talenten zu verbinden.
+        </p>
+        <a href="#" class="partner-btn" onclick="opencModal()">Kontakt aufnehmen</a>
+    </div>
+</section>
+
+<div id="cModal" class="c-modal">
+    <div class="c-modal-content">
+        <span class="c-close" onclick="closecModal()">&times;</span>
+        <h2>Schreiben Sie uns eine Nachricht</h2>
+        <form id="cForm">
+            <input class="c-input" type="text" name="name" placeholder="Ihr Name" required />
+            <input class="c-input" type="email" name="email" placeholder="Ihre E-Mail" required />
+            <input class="c-input" type="text" name="subject" placeholder="Betreff" required />
+            <textarea class="c-textarea" name="message" placeholder="Ihre Nachricht" required></textarea>
+            <button class="c-button" type="submit">Absenden</button>
+        </form>
+    </div>
+</div>
+
+<section class="contact-section">
     <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p>Reach out to discuss partnerships, placement opportunities, or ask any questions. Contact us to book a free consultation</p>
-      <ul>
-        <li><strong>Email:</strong> <a href="mailto:sc.offor@jobdaash.com">info@jobdassh.com</a></li>
-        <li><strong>Phone:</strong> +49 151 6156 9432</li>
-        <li><strong>Address:</strong> Erich-Schmidt-Weg 2, 37083 Göttingen, Germany</li>
-        <li><strong>Website:</strong> <a href="https://jobdassh.com">jobdassh.com</a></li>
-      </ul>
+        <h2>Kontaktieren Sie Uns</h2>
+        <p>Kontaktieren Sie uns, um Partnerschaften, Vermittlungsmöglichkeiten zu besprechen oder Fragen zu stellen. Buchen Sie eine kostenlose Beratung.</p>
+        <ul>
+            <li><strong>E-Mail:</strong> <a href="mailto:sc.offor@jobdaash.com">info@jobdassh.com</a></li>
+            <li><strong>Telefon:</strong> +49 151 6156 9432</li>
+            <li><strong>Adresse:</strong> Erich-Schmidt-Weg 2, 37083 Göttingen, Deutschland</li>
+            <li><strong>Webseite:</strong> <a href="https://jobdassh.com">jobdassh.com</a></li>
+        </ul>
     </div>
     <form method="POST" id="emailForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="subject" placeholder="Subject" />
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-  </section>
-  <section class="cta-section">
-  <div class="cta-container">
-    <h2>Ready to Start Your Ausbildung Journey?</h2>
-    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
-  </div>
+        <input type="text" name="name" placeholder="Ihr Name" required />
+        <input type="email" name="email" placeholder="Ihre E-Mail" required />
+        <input type="text" name="subject" placeholder="Betreff" />
+        <textarea name="message" rows="6" placeholder="Ihre Nachricht" required></textarea>
+        <button type="submit">Nachricht Senden</button>
+    </form>
 </section>
-  <footer class="footer">
+
+<section class="cta-section">
+    <div class="cta-container">
+        <h2>Bereit, Ihre Ausbildung zu starten?</h2>
+        <p>Machen Sie den ersten Schritt zur Karriere im deutschen Gesundheitswesen. Bewerben Sie sich jetzt – es ist kostenlos und dauert nur wenige Minuten.</p>
+        <a href="#" class="cta-button" onclick="openModal()">Jetzt Bewerben</a>
+    </div>
+</section>
+
+<footer class="footer">
     <div class="footer-content">
-      <div class="footer-section logo">
-        <h2>Jobdassh</h2>
-        <p>Bridging global healthcare talent with opportunity in Germany.</p>
-      </div>
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact">
-        <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
-        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
-        <p><i class="fas fa-map-marker-alt"></i> Göttingen, Germany</p>
-      </div>
-      <div class="footer-section newsletter">
-        <h4>Subscribe</h4>
-        <form>
-          <input type="email" placeholder="Your email" />
-          <button>Subscribe</button>
-        </form>
-      </div>
+        <div class="footer-section logo">
+            <h2>Jobdassh</h2>
+            <p>Wir verbinden globales Gesundheitspersonal mit Chancen in Deutschland.</p>
+        </div>
+        <div class="footer-section links">
+            <h4>Schnellzugriff</h4>
+            <ul>
+                <li><a href="about.html">Über uns</a></li>
+                <li><a href="services.html">Dienstleistungen</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h4>Kontakt</h4>
+            <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+            <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+            <p><i class="fas fa-map-marker-alt"></i> Göttingen, Deutschland</p>
+        </div>
+        <div class="footer-section newsletter">
+            <h4>Newsletter abonnieren</h4>
+            <form>
+                <input type="email" placeholder="Ihre E-Mail" />
+                <button>Abonnieren</button>
+            </form>
+        </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
+        <p>&copy; 2025 Jobdassh. Alle Rechte vorbehalten.</p>
     </div>
-  </footer>
+</footer>
   <script>
     function toggleMenu() {
       document.getElementById('navMenu').classList.toggle('active');
