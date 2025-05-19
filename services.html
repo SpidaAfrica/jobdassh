@@ -172,20 +172,76 @@
     font-size: 1rem;
   }
 }
+.a-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 10rem;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
 
+.a-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
 
-  </style>
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'de,en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
+.a-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#applyForm{
+  width: 80%;
+  max-width: 550px;
+}
+.a-input, .a-textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.a-button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .a-modal-content {
+    margin: 15% 5%;
+    padding: 15px;
+    width: 90%;
   }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+.a-input, .a-textarea {
+    font-size: 14px;
+    padding: 8px;
+    width: 90%;
+  }
+
+.a-button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .a-close {
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+  }
+}
+</style>
 </head>
 <body>
   <div id="google_translate_element"></div>
@@ -200,71 +256,24 @@
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a style="color: 'black'" href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank">Apply Now</a></li>
+            <li><a style="color: 'black'" href="#"  onclick="openModal()">Apply Now</a></li>
             </ul>
         </nav>
-        </header>
+    </header>
+  <div id="applyModal" class="a-modal">
+    <div class="a-modal-content">
+      <span class="a-close" onclick="closeModal()">&times;</span>
+      <h2>Apply Here</h2>
+      <form id="applyForm">
+        <input class="a-input" type="text" name="name" placeholder="Your Name" required />
+        <input class="a-input" type="email" name="email" placeholder="Your Email" required />
+        <input class="a-input" type="text" name="subject" placeholder="Subject" required />
+        <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
+        <button class="a-button" type="submit">Send Application</button>
+      </form>
+    </div>
+  </div>
       
-<!--
-  <section class="section">
-    <h2>Our Services</h2>
-    <p>We provide end-to-end international placement support, from candidate selection to full onboarding. Our services are designed for hospitals and vocational training institutions in Germany seeking certified and culturally prepared healthcare professionals.</p>
-
-    <div class="package">
-      <h3>Basic Package (Start Option)</h3>
-      <ul>
-        <li>Pre-screened B1/B2 certified candidates</li>
-        <li>Credential verification</li>
-        <li>Basic visa support and coordination</li>
-        <li>3-month support timeline</li>
-        <li>One-time placement fee</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Enhanced Package (Grow Option)</h3>
-      <ul>
-        <li>All Basic services</li>
-        <li>Visa and embassy support</li>
-        <li>Cultural orientation workshops</li>
-        <li>Candidate onboarding coordination</li>
-        <li>3-month post-placement monitoring</li>
-        <li>Placement fee + support package</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Full-Service Package (Premium Option)</h3>
-      <ul>
-        <li>All Enhanced services</li>
-        <li>End-to-end Ausbildung pipeline setup</li>
-        <li>Employer branding and visibility</li>
-        <li>Career fair representation</li>
-        <li>12-month ongoing performance reports</li>
-        <li>Annual contract or retainer model</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Additional Services</h3>
-      <ul>
-        <li>Accommodation support via partners</li>
-        <li>Airport pickup and settling assistance</li>
-        <li>Post-Ausbildung retainment support</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Special Offer</h3>
-      <p>50% package fee waiver for pre-screened, certified candidates ready to begin Ausbildung this year. Limited-time pilot offer!</p>
-    </div>
-
-    <div class="package">
-      <h3>Track Record</h3>
-      <p>Weâ€™ve successfully collaborated with Asklepios Fachklinikum Niedersachsen â€” one of Germanyâ€™s top hospital groups â€” to provide international Ausbildung candidates on a non-profit basis, refining our process and demonstrating our recruitment excellence.</p>
-    </div>
-  </section>
--->
 <!-- Jobdassh Website: Services Page Redesigned -->
 <section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Assets/v.jpg') center/cover no-repeat; color: white; padding: 6rem 2rem; text-align: center;">
     <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Services</h1>
@@ -430,7 +439,7 @@
   <div class="cta-container">
     <h2>Ready to Start Your Ausbildung Journey?</h2>
     <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank" class="cta-button">Apply Now</a>
+    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
   </div>
 </section>
   
@@ -471,34 +480,43 @@
       document.getElementById('navMenu').classList.toggle('active');
     }
   </script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    let currentLang = 'en';
-  
-    const translations = {
-      de: {
-        heroTitle: 'ÃœberbrÃ¼ckung globaler GesundheitsfachkrÃ¤fte',
-        heroSubtitle: 'Vermittlung zertifizierter PflegekrÃ¤fte an deutsche Einrichtungen',
-        ctaBtn: 'Dienstleistungen erkunden'
-      },
-      en: {
-        heroTitle: 'Bridging Global Healthcare Talent',
-        heroSubtitle: 'Connecting certified healthcare candidates with institutions in Germany',
-        ctaBtn: 'Explore Services'
-      }
-    };
-  
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('langBtn').textContent = currentLang === 'en' ? 'DE' : 'EN';
-  
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          el.textContent = translations[currentLang][key];
-        }
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("bswxk6e-b-vZP8C8f"); // Replace with your EmailJS public key
+  })();
+
+  function openModal() {
+    document.getElementById("applyModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("applyModal").style.display = "none";
+  }
+
+  // Handle form submission
+  document.getElementById("applyForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1uskqje', 'template_f8ysdbm', this)
+      .then(() => {
+        alert('Application sent successfully!');
+        closeModal();
+        this.reset();
+      }, (error) => {
+        console.error('Failed:', error);
+        alert('Failed to send application.');
       });
+  });
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target == document.getElementById("applyModal")) {
+      closeModal();
     }
-  </script>
+  };
+</script>
   
 </body>
 </html>
