@@ -244,6 +244,29 @@
   width: 100%;
   cursor: pointer;
 }
+@media screen and (max-width: 480px) {
+  .a-modal-content {
+    margin: 15% 5%;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .a-input, .a-textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .a-button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .a-close {
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+  }
+}
 .c-modal {
   display: none;
   position: fixed;
@@ -285,6 +308,29 @@
   padding: 10px;
   width: 100%;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .c-modal-content {
+    margin: 15% 5%;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .c-input, .c-textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .c-button[type="submit"] {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .c-close {
+    font-size: 20px;
+    top: 10px;
+    right: 15px;
+  }
 }
   </style>
   <script type="text/javascript">
@@ -340,10 +386,10 @@
     <p style="font-size: 1.1rem; color: #1e1e1e; margin-bottom: 2rem;">
       Are you a hospital, care facility, or vocational training school looking for skilled, German-speaking healthcare candidates? Let's collaborate to bridge your staffing needs with top international talent.
     </p>
-    <a href="#" class="partner-btn">Get in Touch</a>
+    <a href="#" class="partner-btn" onclick="opencModal()">Get in Touch</a>
   </div>
 </section>
-<div id="applyModal" class="c-modal">
+<div id="cModal" class="c-modal">
   <div class="c-modal-content">
     <span class="c-close" onclick="closeModal()">&times;</span>
     <h2>Send Us A Mail</h2>
@@ -381,7 +427,7 @@
   <div class="cta-container">
     <h2>Ready to Start Your Ausbildung Journey?</h2>
     <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeYLK94_OUbcEI__YYnlMYfyHTWU_Gyf2Hexm-VJPnHCryyVg/viewform?usp=header" target="_blank" class="cta-button">Apply Now</a>
+    <a href="#" target="_blank" class="cta-button" onclick="openModal()">Apply Now</a>
   </div>
 </section>
   <footer class="footer">
@@ -458,6 +504,9 @@
   };
 </script>
 <script>
+    (function () {
+    emailjs.init("bswxk6e-b-vZP8C8f"); // Replace with your EmailJS public key
+  })();
     // Handle form submission
   document.getElementById("emailForm").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -474,7 +523,20 @@
   });
 </script>
 <script>
-    // Handle form submission
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("bswxk6e-b-vZP8C8f"); // Replace with your EmailJS public key
+  })();
+
+  function opencModal() {
+    document.getElementById("cModal").style.display = "block";
+  }
+
+  function closecModal() {
+    document.getElementById("cModal").style.display = "none";
+  }
+
+  // Handle form submission
   document.getElementById("cForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -488,6 +550,13 @@
         alert('Failed to send application.');
       });
   });
+
+  // Optional: close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target == document.getElementById("cModal")) {
+      closeModal();
+    }
+  };
 </script>
   
 </body>
