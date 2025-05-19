@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jobdassh | Bridging Global Healthcare Talent</title>
+  <title>Jobdassh | Brücke für globales Gesundheitspersonal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -392,216 +392,221 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Jobdassh</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
+  <div class="logo">Jobdassh</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="services.html">Leistungen</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a style="color: 'black'" onclick="document.getElementById('applyModal').style.display='block'" onclick="openModal()">Jetzt Bewerben</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="applyModal" class="a-modal">
+  <div class="a-modal-content">
+    <span class="a-close" onclick="closeModal()">&times;</span>
+    <h2>Hier Bewerben</h2>
+    <form id="applyForm">
+      <input class="a-input" type="text" name="name" placeholder="Ihr Name" required />
+      <input class="a-input" type="email" name="email" placeholder="Ihre E-Mail" required />
+      <input class="a-input" type="text" name="subject" placeholder="Betreff" required />
+      <textarea class="a-textarea" name="message" placeholder="Ihre Nachricht" required></textarea>
+      <button class="a-button" type="submit">Bewerbung Senden</button>
+    </form>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Internationale Pflegekräfte verbinden</h1>
+    <p class="hero-subtext">Zertifizierte Pflegekräfte mit Institutionen in Deutschland verbinden</p>
+    <a href="#" class="cta-btn" onclick="openModal()">Jetzt Loslegen</a>
+  </div>
+</section>
+
+<section class="why-section">
+  <h2>Warum Jobdassh?</h2>
+  <div class="features">
+    <div class="feature-card">
+      <i class="fas fa-user-check"></i>
+      <h3>Zertifizierte Kandidaten</h3>
+      <p>Alle Kandidaten besitzen ein B1/B2-Zertifikat und sind kulturell vorbereitet.</p>
     </div>
-    <nav>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a style="color: 'black'" onclick="document.getElementById('applyModal').style.display='block'" onclick="openModal()">Apply Now</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div id="applyModal" class="a-modal">
-    <div class="a-modal-content">
-      <span class="a-close" onclick="closeModal()">&times;</span>
-      <h2>Apply Here</h2>
-      <form id="applyForm">
-        <input class="a-input" type="text" name="name" placeholder="Your Name" required />
-        <input class="a-input" type="email" name="email" placeholder="Your Email" required />
-        <input class="a-input" type="text" name="subject" placeholder="Subject" required />
-        <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
-        <button class="a-button" type="submit">Send Application</button>
-      </form>
+    <div class="feature-card">
+      <i class="fas fa-globe"></i>
+      <h3>Globale Reichweite</h3>
+      <p>Wir verbinden Talente aus verschiedenen Ländern mit deutschen Einrichtungen.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-hands-helping"></i>
+      <h3>Faire Rekrutierung</h3>
+      <p>Keine Gebühren für Bewerber und transparente Prozesse.</p>
     </div>
   </div>
-  <section class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Bridging Global Healthcare Talent</h1>
-      <p class="hero-subtext">Connecting certified healthcare candidates with institutions in Germany</p>
-      <a href="#" class="cta-btn" onclick="openModal()">Get Started</a>
-    </div>
-  </section>
+</section>
 
-  <section class="why-section">
-    <h2>Why Choose Jobdassh</h2>
-    <div class="features">
-      <div class="feature-card">
-        <i class="fas fa-user-check"></i>
-        <h3>Certified Candidates</h3>
-        <p>All candidates are B1/B2 certified and culturally trained.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-globe"></i>
-        <h3>Global Reach</h3>
-        <p>We connect talents from multiple countries with German institutions.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-hands-helping"></i>
-        <h3>Ethical Recruitment</h3>
-        <p>Zero-fee policy for candidates and transparent processes.</p>
-      </div>
+<section class="overview-section">
+  <h2>Unsere Leistungen</h2>
+  <div class="overview-cards">
+    <div class="overview-card">
+      <img src="https://img.icons8.com/ios-filled/100/language.png" alt="Zertifiziert">
+      <h3>Zertifizierte Talente</h3>
+      <p>Wir vermitteln Kandidaten mit den Sprachkenntnissen B1/B2.</p>
     </div>
-  </section>
-  <section class="overview-section">
-    <h2>Explore Our Services</h2>
-    <div class="overview-cards">
-      <div class="overview-card">
-        <img src="https://img.icons8.com/ios-filled/100/language.png" alt="Certified">
-        <h3>Certified Talent</h3>
-        <p>We place candidates who have obtained the immun language requirements of B1/B2</p>
-      </div>
-      <div class="overview-card">
-        <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Relocation">
-        <h3>Relocation Support</h3>
-        <p>Visa application guidance.</p>
-      </div>
-      <div class="overview-card">
-        <img src="https://img.icons8.com/ios-filled/100/briefcase.png" alt="Onboarding">
-        <h3>Onboarding & Integration</h3>
-        <p>We coordinate your onboarding process and offer 3–12 months of post-placement support.</p>
-      </div>
+    <div class="overview-card">
+      <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Umsiedlung">
+      <h3>Unterstützung bei der Umsiedlung</h3>
+      <p>Beratung zur Visumsbeantragung.</p>
     </div>
-  </section>
+    <div class="overview-card">
+      <img src="https://img.icons8.com/ios-filled/100/briefcase.png" alt="Einarbeitung">
+      <h3>Einarbeitung & Integration</h3>
+      <p>Wir koordinieren die Einarbeitung und bieten 3–12 Monate Unterstützung nach der Vermittlung.</p>
+    </div>
+  </div>
+</section>
 
 <section class="process-section">
-  <h2>How It Works</h2>
+  <h2>So funktioniert es</h2>
   <div class="process-steps">
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/document--v1.png" alt="Apply Online">
-      <h4>1. Apply Online</h4>
-      <p>Submit your application through our simple online form.</p>
+      <img src="https://img.icons8.com/ios-filled/100/document--v1.png" alt="Online Bewerbung">
+      <h4>1. Online Bewerbung</h4>
+      <p>Reichen Sie Ihre Bewerbung über unser Online-Formular ein.</p>
     </div>
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/conference-call.png" alt="Screening">
-      <h4>2. Screening & Interview</h4>
-      <p>We assess your qualifications and conduct interviews to match your goals.</p>
+      <img src="https://img.icons8.com/ios-filled/100/conference-call.png" alt="Vorauswahl">
+      <h4>2. Vorauswahl & Interview</h4>
+      <p>Wir prüfen Ihre Qualifikationen und führen Interviews durch.</p>
     </div>
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/documents.png" alt="Verification">
-      <h4>3. Language & Document Verification</h4>
-      <p>We verify your B1/B2 German certificate and supporting documents.</p>
+      <img src="https://img.icons8.com/ios-filled/100/documents.png" alt="Sprachnachweis">
+      <h4>3. Sprach- & Dokumentenprüfung</h4>
+      <p>Wir prüfen Ihr B1/B2-Zertifikat und relevante Unterlagen.</p>
     </div>
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/handshake.png" alt="Matching">
-      <h4>4. Matching With Institutions</h4>
-      <p>You’re matched with suitable care homes and schools in Germany.</p>
+      <img src="https://img.icons8.com/ios-filled/100/handshake.png" alt="Vermittlung">
+      <h4>4. Vermittlung an Einrichtungen</h4>
+      <p>Sie werden mit passenden Pflegeeinrichtungen oder Schulen verbunden.</p>
     </div>
     <div class="process-step">
       <img src="https://img.icons8.com/ios-filled/100/training.png" alt="Training">
-      <h4>5. Training & Cultural Preparation</h4>
-      <p>Get guidance on German workplace culture, language, and expectations.</p>
+      <h4>5. Schulung & kulturelle Vorbereitung</h4>
+      <p>Wir bereiten Sie auf Kultur, Sprache und Arbeitsleben in Deutschland vor.</p>
     </div>
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Visa">
-      <h4>6. Visa & Relocation Support</h4>
-      <p>We guide you with your visa, travel, accommodation and onboarding journey.</p>
+      <img src="https://img.icons8.com/ios-filled/100/passport.png" alt="Visum">
+      <h4>6. Visum & Umzugsunterstützung</h4>
+      <p>Wir unterstützen Sie beim Visum, Reise, Unterkunft und beim Einstieg.</p>
     </div>
     <div class="process-step">
-      <img src="https://img.icons8.com/ios-filled/100/stethoscope.png" alt="Start Ausbildung">
-      <h4>7. Start Your Ausbildung in Germany</h4>
-      <p>Begin your journey toward a rewarding career in the German healthcare system.</p>
+      <img src="https://img.icons8.com/ios-filled/100/stethoscope.png" alt="Ausbildung starten">
+      <h4>7. Start Ihrer Ausbildung</h4>
+      <p>Starten Sie Ihre Karriere im deutschen Gesundheitssystem.</p>
     </div>
   </div>
 </section>
 
+<section class="testimonials">
+  <h2>Was unsere Kandidaten sagen</h2>
+  <div class="testimonial">
+    <p>"Jobdassh hat den ganzen Prozess einfach und stressfrei gemacht."</p>
+    <h4>— Hilda</h4>
+  </div>
+  <div class="testimonial">
+    <p>"Dank ihrer Unterstützung war das Ankommen viel einfacher."</p>
+    <h4>— Uche</h4>
+  </div>
+</section>
 
-  <section class="testimonials">
-    <h2>What Candidates Say</h2>
-    <div class="testimonial">
-      <p>"Jobdassh made the entire process smooth and stress-free."</p>
-      <h4>— Hilda</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Their ongoing support made settling in so much easier."</p>
-      <h4>— Uche</h4>
-    </div>
-  </section>
-  <section class="faq-section" id="faq">
-  <h2 class="faq-title">Frequently Asked Questions</h2>
+<section class="faq-section" id="faq">
+  <h2 class="faq-title">Häufig gestellte Fragen</h2>
   <div class="faq-container">
     <div class="faq-item">
-      <button class="faq-question">1. Who can apply through Jobdaash for an Ausbildung in Germany?</button>
+      <button class="faq-question">1. Wer kann sich über Jobdassh für eine Ausbildung in Deutschland bewerben?</button>
       <div class="faq-answer">
-        <p>Jobdaash supports German-speaking international candidates at least 18years of age, and hold a valid B1 or B2 German language certificate. Candidates must also be highly motivated to pursue a 3-year vocational training (Ausbildung) program in the healthcare sector.</p>
+        <p>Jobdassh unterstützt internationale Bewerber ab 18 Jahren mit gültigem B1/B2-Zertifikat und hoher Motivation für eine dreijährige Ausbildung im Gesundheitswesen.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">2. What services does Jobdaash provide to partner institutions in Germany?</button>
+      <button class="faq-question">2. Welche Leistungen bietet Jobdassh Partnerinstitutionen in Deutschland?</button>
       <div class="faq-answer">
-        <p>We offer end-to-end international recruitment services including candidate sourcing, language and qualification screening, cultural preparation, visa application support, relocation assistance, and post-arrival onboarding. Our goal is to help institutions reduce hiring costs while building sustainable, skilled, and diverse healthcare teams.</p>
+        <p>Wir bieten umfassende Rekrutierungsdienste: Bewerberauswahl, Sprach- & Qualifikationsprüfung, kulturelle Vorbereitung, Visumunterstützung, Umsiedlung & Onboarding. Unser Ziel: nachhaltige & diverse Teams.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">3. Do candidates have to pay to be placed through Jobdaash?</button>
+      <button class="faq-question">3. Müssen Bewerber Gebühren zahlen?</button>
       <div class="faq-answer">
-        <p>No. In line with ethical recruitment standards and international labor guidelines, Jobdaash does not charge candidates placement fees. All our services to candidates—from guidance to visa and relocation support—are provided free of charge.</p>
+        <p>Nein. Gemäß den Prinzipien ethischer Rekrutierung erhebt Jobdassh keine Vermittlungsgebühren von Kandidaten. Alle Dienstleistungen sind kostenlos.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">4. What kind of support do candidates receive before and after arriving in Germany?</button>
+      <button class="faq-question">4. Welche Unterstützung erhalten Kandidaten vor und nach der Ankunft?</button>
       <div class="faq-answer">
-        <p>Candidates receive comprehensive support including pre-departure orientation, visa and document guidance, language training referrals, and cultural integration coaching. After arrival, we assist with onboarding, accommodation setup (through partners), and ongoing check-ins to ensure a smooth start in their Ausbildung.</p>
+        <p>Wir bieten Orientierung vor der Abreise, Visumhilfe, Sprachtrainings-Empfehlungen, Integrationscoaching sowie Unterstützung bei Ankunft & Unterkunft.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">5. How can a hospital or nursing school become a Jobdaash partner?</button>
+      <button class="faq-question">5. Wie können Einrichtungen Partner werden?</button>
       <div class="faq-answer">
-        <p>Institutions can express interest by contacting us via email or through our website’s partner form. We’ll schedule a call to understand your staffing needs and provide a tailored recruitment proposal. Once aligned, we begin sourcing pre-qualified, B1/B2-certified candidates ready for training and long-term integration.</p>
+        <p>Interessierte Institutionen können uns per E-Mail oder Formular kontaktieren. Wir planen ein Gespräch, erstellen ein Angebot und vermitteln passende, zertifizierte Kandidaten.</p>
       </div>
     </div>
     <div class="faq-item">
-      <button class="faq-question">6. What language level is required for candidates to be eligible for placement?</button>
+      <button class="faq-question">6. Welches Sprachniveau wird verlangt?</button>
       <div class="faq-answer">
-        <p>Candidates must have at least a B1 or B2 German language certificate, based on the Common European Framework of Reference for Languages (CEFR). Certification must be from recognized institutions such as Goethe-Institut, ÖSD, or Telc. This ensures that they can successfully integrate into the Ausbildung program and communicate effectively in clinical environments.</p>
+        <p>Mindestens B1/B2 gemäß GER (Gemeinsamer Europäischer Referenzrahmen). Zertifikate von Goethe-Institut, ÖSD oder Telc werden akzeptiert.</p>
       </div>
     </div>
-  </div>
-</section>
-<section class="cta-section">
-  <div class="cta-container">
-    <h2>Ready to Start Your Ausbildung Journey?</h2>
-    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
   </div>
 </section>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section logo">
-        <h2>Jobdassh</h2>
-        <p>Bridging global healthcare talent with opportunity in Germany.</p>
-      </div>
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact">
-        <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
-        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
-        <p><i class="fas fa-map-marker-alt"></i> Göttingen, Germany</p>
-      </div>
-      <div class="footer-section newsletter">
-        <h4>Subscribe</h4>
-        <form>
-          <input type="email" placeholder="Your email" />
-          <button>Subscribe</button>
-        </form>
-      </div>
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Bereit für Ihre Ausbildung in Deutschland?</h2>
+    <p>Machen Sie den ersten Schritt in Ihre Karriere im deutschen Gesundheitswesen. Die Bewerbung ist kostenlos und dauert nur wenige Minuten.</p>
+    <a href="#" class="cta-button" onclick="openModal()">Jetzt Bewerben</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section logo">
+      <h2>Jobdassh</h2>
+      <p>Wir verbinden internationale Pflegekräfte mit Chancen in Deutschland.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
+    <div class="footer-section links">
+      <h4>Schnellzugriff</h4>
+      <ul>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="services.html">Leistungen</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
     </div>
-  </footer>
+    <div class="footer-section contact">
+      <h4>Kontakt</h4>
+      <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+      <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+      <p><i class="fas fa-map-marker-alt"></i> Göttingen, Deutschland</p>
+    </div>
+    <div class="footer-section newsletter">
+      <h4>Newsletter</h4>
+      <form>
+        <input type="email" placeholder="Ihre E-Mail" />
+        <button>Abonnieren</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Jobdassh. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
   
 
   <script>
