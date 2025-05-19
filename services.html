@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Jobdassh</title>
+  <title>Dienstleistungen | Jobdassh</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     body {
@@ -103,7 +103,7 @@
   border-top: 1px solid #1b4a59;
   padding-top: 1rem;
 }
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
       .nav-links { flex-direction: column; gap: 0.5rem; }
     }
     .menu-toggle {
@@ -241,90 +241,6 @@
     right: 15px;
   }
 }
-</style>
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">Jobdassh</div>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav>
-            <ul class="nav-links" id="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a style="color: 'black'" href="#"  onclick="openModal()">Apply Now</a></li>
-            </ul>
-        </nav>
-    </header>
-  <div id="applyModal" class="a-modal">
-    <div class="a-modal-content">
-      <span class="a-close" onclick="closeModal()">&times;</span>
-      <h2>Apply Here</h2>
-      <form id="applyForm">
-        <input class="a-input" type="text" name="name" placeholder="Your Name" required />
-        <input class="a-input" type="email" name="email" placeholder="Your Email" required />
-        <input class="a-input" type="text" name="subject" placeholder="Subject" required />
-        <textarea class="a-textarea" name="message" placeholder="Your Message" required></textarea>
-        <button class="a-button" type="submit">Send Application</button>
-      </form>
-    </div>
-  </div>
-      
-<!-- Jobdassh Website: Services Page Redesigned -->
-<section class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Assets/v.jpg') center/cover no-repeat; color: white; padding: 6rem 2rem; text-align: center;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Our Services</h1>
-    <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">We provide end-to-end international placement support, from candidate selection to full onboarding. Tailored for hospitals and vocational training institutions in Germany.</p>
-  </section>
-<!--  
-  <section class="services-overview section" style="text-align: center;">
-    <h2 style="color: #002c3e;">Explore Our Packages</h2>
-    <div class="grid">
-      <button class="modal-btn" data-modal="basic">Basic Package</button>
-      <button class="modal-btn" data-modal="enhanced">Enhanced Package</button>
-      <button class="modal-btn" data-modal="full">Full-Service Package</button>
-    </div>
-  </section>
-  -->
-  <!-- Modals -->
-  <div id="basic" class="modal"><div class="modal-content animate">
-    <span class="close">&times;</span>
-    <h3><i class="fas fa-check-circle"></i> Basic Package (Start Option)</h3>
-    <ul>
-      <li>Pre-screened B1/B2 certified candidates</li>
-      <li>Credential verification</li>
-      <li>Basic visa support and coordination</li>
-      <li>3-month support timeline</li>
-      <li>One-time placement fee</li>
-    </ul>
-  </div></div>
-  <div id="enhanced" class="modal"><div class="modal-content animate">
-    <span class="close">&times;</span>
-    <h3><i class="fas fa-check-circle"></i> Enhanced Package (Grow Option)</h3>
-    <ul>
-      <li>All Basic services</li>
-      <li>Visa and embassy support</li>
-      <li>Cultural orientation workshops</li>
-      <li>Candidate onboarding coordination</li>
-      <li>3-month post-placement monitoring</li>
-      <li>Placement fee + support package</li>
-    </ul>
-  </div></div>
-  <div id="full" class="modal"><div class="modal-content animate">
-    <span class="close">&times;</span>
-    <h3><i class="fas fa-check-circle"></i> Full-Service Package (Premium Option)</h3>
-    <ul>
-      <li>All Enhanced services</li>
-      <li>End-to-end Ausbildung pipeline setup</li>
-      <li>Employer branding and visibility</li>
-      <li>Career fair representation</li>
-      <li>12-month ongoing performance reports</li>
-      <li>Annual contract or retainer model</li>
-    </ul>
-  </div></div>
-  <style>
     .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
     .modal-btn {
       background: #14b8a6; color: #fff; border: none; padding: 0.75rem 1.5rem;
@@ -352,71 +268,177 @@
       from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-  </style>
-  <!-- Additional Services Section with Modal -->
-  
-  <!-- Special Offer Hero Section 
-  <section class="special-offer" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./Assets/s.jpg') center/cover no-repeat; color: white; padding: 5rem 2rem; text-align: center;">
-    <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">ðŸŽ‰ Special Offer</h2>
-    <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">
-      50% package fee waiver for pre-screened, certified candidates ready to begin Ausbildung this year. Limited-time pilot offer!
-    </p>
-  </section>
-  -->
-  <section class="services-boxed section" style="padding: 4rem 2rem; background: #f9f9f9;">
-  <h2 style="text-align: center; margin-bottom: 2rem; color: #002c3e;">Explore Our Sevices</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-    <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-      <h3 style="color: #14b8a6;">For Candidates</h3>
-      <ul style="margin-top: 1rem; line-height: 1.8;">
-        <li>Pre-screening your eligibility</li>
-        <li>Language verification (B1/B2 German)</li>
-        <li>CV support and interview prep</li>
-        <li>Connecting you to top nursing schools and hospitals</li>
-        <li>Offering guidance for visa and relocation processes</li>
+</style>
+</head>
+<body>
+<title>Dienstleistungen | Jobdassh</title>
+
+<header class="navbar">
+  <div class="logo">Jobdassh</div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über uns</a></li>
+      <li><a href="services.html">Dienstleistungen</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+      <li><a style="color: 'black'" href="#" onclick="openModal()">Jetzt bewerben</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="applyModal" class="a-modal">
+  <div class="a-modal-content">
+    <span class="a-close" onclick="closeModal()">&times;</span>
+    <h2>Hier bewerben</h2>
+    <form id="applyForm">
+      <input class="a-input" type="text" name="name" placeholder="Ihr Name" required />
+      <input class="a-input" type="email" name="email" placeholder="Ihre E-Mail" required />
+      <input class="a-input" type="text" name="subject" placeholder="Betreff" required />
+      <textarea class="a-textarea" name="message" placeholder="Ihre Nachricht" required></textarea>
+      <button class="a-button" type="submit">Bewerbung senden</button>
+    </form>
+  </div>
+</div>
+
+<section class="hero-section" style="...">
+  <h1 style="...">Unsere Dienstleistungen</h1>
+  <p style="...">Wir bieten umfassende internationale Vermittlungsunterstützung – von der Kandidatenauswahl bis zur vollständigen Eingliederung. Maßgeschneidert für Krankenhäuser und Bildungseinrichtungen in Deutschland.</p>
+</section>
+
+<!-- Modals -->
+<div id="basic" class="modal"><div class="modal-content animate">
+  <span class="close">&times;</span>
+  <h3><i class="fas fa-check-circle"></i> Basispaket (Startoption)</h3>
+  <ul>
+    <li>Vorausgewählte B1/B2-zertifizierte Kandidaten</li>
+    <li>Überprüfung der Qualifikationen</li>
+    <li>Grundlegende Visumsunterstützung</li>
+    <li>3-monatiger Unterstützungszeitraum</li>
+    <li>Einmalige Vermittlungsgebühr</li>
+  </ul>
+</div></div>
+
+<div id="enhanced" class="modal"><div class="modal-content animate">
+  <span class="close">&times;</span>
+  <h3><i class="fas fa-check-circle"></i> Erweitertes Paket (Wachstumsoption)</h3>
+  <ul>
+    <li>Alle Leistungen des Basispakets</li>
+    <li>Visums- und Botschaftsunterstützung</li>
+    <li>Workshops zur kulturellen Orientierung</li>
+    <li>Koordination der Eingliederung</li>
+    <li>3-monatige Nachbetreuung</li>
+    <li>Vermittlungsgebühr + Betreuungspaket</li>
+  </ul>
+</div></div>
+
+<div id="full" class="modal"><div class="modal-content animate">
+  <span class="close">&times;</span>
+  <h3><i class="fas fa-check-circle"></i> Rundum-sorglos-Paket (Premiumoption)</h3>
+  <ul>
+    <li>Alle Leistungen des erweiterten Pakets</li>
+    <li>Aufbau einer kompletten Ausbildungspipeline</li>
+    <li>Arbeitgebermarkenbildung und Sichtbarkeit</li>
+    <li>Vertretung bei Karrieremessen</li>
+    <li>12-monatige Leistungsberichte</li>
+    <li>Jahresvertrag oder Retainermodell</li>
+  </ul>
+</div></div>
+
+<section class="services-boxed section" style="...">
+  <h2 style="...">Unsere Dienstleistungen im Überblick</h2>
+  <div style="...">
+    <div style="...">
+      <h3 style="...">Für Kandidaten</h3>
+      <ul style="...">
+        <li>Vorauswahl Ihrer Eignung</li>
+        <li>Sprachnachweis (B1/B2 Deutsch)</li>
+        <li>Unterstützung beim Lebenslauf und Interviewvorbereitung</li>
+        <li>Vermittlung an führende Pflegeeinrichtungen</li>
+        <li>Beratung bei Visum- und Umzugsprozessen</li>
       </ul>
     </div>
-    <div style="flex: 1; min-width: 300px; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-      <h3 style="color: #14b8a6;">For Partner Institutions</h3>
-      <ul style="margin-top: 1rem; line-height: 1.8;">
-        <li>Access a pool of qualified, German-speaking international candidates</li>
-        <li>Ensure cultural and linguistic readiness</li>
-        <li>Reduce onboarding risks through our tailored pre-departure training</li>
-        <li>Fill essential nursing roles with reliable professionals</li>
+    <div style="...">
+      <h3 style="...">Für Partnerinstitutionen</h3>
+      <ul style="...">
+        <li>Zugang zu qualifizierten internationalen Kandidaten mit Deutschkenntnissen</li>
+        <li>Sicherstellung kultureller und sprachlicher Vorbereitung</li>
+        <li>Risikominderung durch maßgeschneiderte Vorbereitungen</li>
+        <li>Besetzung wichtiger Pflegepositionen mit verlässlichen Fachkräften</li>
       </ul>
     </div>
   </div>
 </section>
 
+<section class="services-extra section" style="...">
+  <h2 style="...">Zusätzliche Dienstleistungen</h2>
+  <button class="modal-btn" data-modal="additional">Dienstleistungen anzeigen</button>
+</section>
 
-  <section class="services-extra section" style="text-align: center;">
-    <h2 style="color: #002c3e;">Additional Services</h2>
-    <button class="modal-btn" data-modal="additional">View Services</button>
-  </section>
-  <div id="additional" class="modal">
-    <div class="modal-content animate">
-      <span class="close">&times;</span>
-      <h3><i class="fas fa-check-circle"></i> Additional Services</h3>
+<div id="additional" class="modal">
+  <div class="modal-content animate">
+    <span class="close">&times;</span>
+    <h3><i class="fas fa-check-circle"></i> Zusätzliche Dienstleistungen</h3>
+    <ul>
+      <li>Unterkunftsvermittlung über Partner</li>
+      <li>Abholung vom Flughafen und Unterstützung beim Einleben</li>
+      <li>Unterstützung nach Ausbildungsabschluss</li>
+    </ul>
+  </div>
+</div>
+
+<section class="track-record section" style="...">
+  <div style="...">
+    <h2 style="...">Erfolgsbilanz</h2>
+    <p>Wir haben erfolgreich mit dem Asklepios Fachklinikum Niedersachsen – einer der führenden Klinikgruppen Deutschlands – zusammengearbeitet, um internationale Auszubildende gemeinnützig zu vermitteln. Unser Verfahren wurde dabei kontinuierlich optimiert.</p>
+  </div>
+  <div style="...">
+    <img src="./Assets/c.jpg" alt="Krankenhaus-Kooperation" style="..." />
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-container">
+    <h2>Bereit für Ihre Ausbildung in Deutschland?</h2>
+    <p>Machen Sie den ersten Schritt in eine Karriere im deutschen Gesundheitswesen. Bewerben Sie sich jetzt – kostenlos und in nur wenigen Minuten.</p>
+    <a href="#" class="cta-button" onclick="openModal()">Jetzt bewerben</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section logo">
+      <h2>Jobdassh</h2>
+      <p>Vermittlung internationaler Pflegefachkräfte nach Deutschland.</p>
+    </div>
+    <div class="footer-section links">
+      <h4>Schnellzugriff</h4>
       <ul>
-        <li>Accommodation support via partners</li>
-        <li>Airport pickup and settling assistance</li>
-        <li>Post-Ausbildung retainment support</li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="services.html">Dienstleistungen</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
       </ul>
     </div>
+    <div class="footer-section contact">
+      <h4>Kontakt</h4>
+      <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
+      <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
+      <p><i class="fas fa-map-marker-alt"></i> Göttingen, Deutschland</p>
+    </div>
+    <div class="footer-section newsletter">
+      <h4>Newsletter abonnieren</h4>
+      <form>
+        <input type="email" placeholder="Ihre E-Mail" />
+        <button>Abonnieren</button>
+      </form>
+    </div>
   </div>
-  
-  <!-- Track Record Section with Split Layout -->
-  <section class="track-record section" style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-    <div style="flex: 1; min-width: 280px;">
-      <h2 style="color: #002c3e;">Track Record</h2>
-      <p>Weâ€™ve successfully collaborated with Asklepios Fachklinikum Niedersachsen â€” one of Germanyâ€™s top hospital groups â€” to provide international Ausbildung candidates on a non-profit basis, refining our process and demonstrating our recruitment excellence.</p>
-    </div>
-    <div style="flex: 1; min-width: 280px;">
-      <img src="./Assets/c.jpg" alt="Hospital Collaboration" style="width: 100%; border-radius: 10px;" />
-    </div>
-  </section>
-  
-  
+  <div class="footer-bottom">
+    <p>&copy; 2025 Jobdassh. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
   <script>
     const buttons = document.querySelectorAll('.modal-btn');
     const modals = document.querySelectorAll('.modal');
@@ -434,46 +456,6 @@
       if (e.target.classList.contains('modal')) e.target.style.display = 'none';
     };
   </script>
-  <section class="cta-section">
-  <div class="cta-container">
-    <h2>Ready to Start Your Ausbildung Journey?</h2>
-    <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
-  </div>
-</section>
-  
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section logo">
-        <h2>Jobdassh</h2>
-        <p>Bridging global healthcare talent with opportunity in Germany.</p>
-      </div>
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact">
-        <h4>Contact</h4>
-        <p><i class="fas fa-envelope"></i> info@jobdassh.com</p>
-        <p><i class="fas fa-phone"></i> +49 151 6156 9432</p>
-        <p><i class="fas fa-map-marker-alt"></i> GÃ¶ttingen, Germany</p>
-      </div>
-      <div class="footer-section newsletter">
-        <h4>Subscribe</h4>
-        <form>
-          <input type="email" placeholder="Your email" />
-          <button>Subscribe</button>
-        </form>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Jobdassh. All Rights Reserved.</p>
-    </div>
-  </footer>
   <script>
     function toggleMenu() {
       document.getElementById('navMenu').classList.toggle('active');
