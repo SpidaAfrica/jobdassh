@@ -287,8 +287,12 @@
   position: relative;
 }
 #applyForm{
-  width: 90%;
-  max-width: 600px;
+  width: 80%;
+  max-width: 550px;
+}
+#cForm{
+  width: 80%;
+  max-width: 550px;
 }
 
 .c-close {
@@ -396,7 +400,7 @@
 </section>
 <div id="cModal" class="c-modal">
   <div class="c-modal-content">
-    <span class="c-close" onclick="closeModal()">&times;</span>
+    <span class="c-close" onclick="closecModal()">&times;</span>
     <h2>Send Us A Mail</h2>
     <form id="cForm" style="width: 550px">
       <input class="c-input" type="text" name="name" placeholder="Your Name" required />
@@ -432,7 +436,7 @@
   <div class="cta-container">
     <h2>Ready to Start Your Ausbildung Journey?</h2>
     <p>Take the first step toward building your career in Germany’s healthcare sector. Submit your application now — it's free and only takes a few minutes.</p>
-    <a href="#" target="_blank" class="cta-button" onclick="openModal()">Apply Now</a>
+    <a href="#" class="cta-button" onclick="openModal()">Apply Now</a>
   </div>
 </section>
   <footer class="footer">
@@ -472,6 +476,7 @@
       document.getElementById('navMenu').classList.toggle('active');
     }
   </script>  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
   // Initialize EmailJS
   (function () {
